@@ -20,9 +20,10 @@ namespace NOK
             //var b = Convert.ToInt64(Console.ReadLine());
 
             string str = Console.ReadLine();
-            //char[] strArr= str.Where(!null,);
+            var div = str.FirstOrDefault(char.IsLetter);
 
-        
+
+
             //int[] intMatch = str.Where(Char.IsDigit).Select(x => int.Parse(x.ToString())).ToArray();
             //var a = intMatch[0];
             //var b = intMatch[1];
@@ -31,23 +32,14 @@ namespace NOK
             //var lcm = a * b / gcd;
 
             //Console.WriteLine($"\nНОД равен {gcd}\nНОК равен {lcm}");
-
+            Console.WriteLine($"\n div  {div}");
             Console.ReadKey();
         }
 
-        private static char? Divider(char ch)
-        {
-            if (Char.IsLetter(ch))
-            {
-                return ch;
-            }
-
-            else
-            {
-                return null;
-            }
-
-        }
+        
+        
+        
+        
 
         private static long GetGCD(long a, long b)
         {
@@ -67,5 +59,6 @@ namespace NOK
 
     }
 
+ 
 
 }
