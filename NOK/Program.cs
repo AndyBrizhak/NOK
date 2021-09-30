@@ -27,7 +27,7 @@ namespace NOK
 
             Console.WriteLine(lcm);
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
 
