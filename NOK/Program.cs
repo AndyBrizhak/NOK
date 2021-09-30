@@ -13,13 +13,7 @@ namespace NOK
     {
         static void Main(string[] args)
         {
-            //Console.Clear();
-            //Console.WriteLine("Введите a и b:");
-            //Console.Write(" a = ");
-            //var a = Convert.ToInt64(Console.ReadLine());
-            //Console.Write(" b = ");
-            //var b = Convert.ToInt64(Console.ReadLine());
-
+            
             string str = Console.ReadLine();
             var div = str.FirstOrDefault(CharExtension.IsNoDigit);
             var divs = new char[1];
