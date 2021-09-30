@@ -21,25 +21,25 @@ namespace NOK
             //var b = Convert.ToInt64(Console.ReadLine());
 
             string str = Console.ReadLine();
-            var div = str.FirstOrDefault(char.IsLetter);
+            var div = str.FirstOrDefault(CharExtension.IsNoDigit);
             var divs = new char[1];
             divs[0] = div;
-            var strList = str.Split(divs);
+            var strList = str.Split(divs,2);
+            int n;
+            ulong l;
+            bool resParsToInt = int.TryParse(strList[0], out n);
+            bool resParseToUlong = ulong.TryParse(strList[1], out l);
+            
+
             
             
-            //var strList = str.Substring()
-                
-                
-                
-                //int[] intMatch = str.Where(Char.IsDigit).Select(x => int.Parse(x.ToString())).ToArray();
-            //var a = intMatch[0];
-            //var b = intMatch[1];
 
             //var gcd = GetGCD(a, b);
             //var lcm = a * b / gcd;
 
             //Console.WriteLine($"\nНОД равен {gcd}\nНОК равен {lcm}");
             Console.WriteLine($"\n div  {div}");
+            
             Console.ReadKey();
         }
 
@@ -65,6 +65,21 @@ namespace NOK
 
 
     }
+
+    public static class CharExtension
+    {
+        public static bool IsNoDigit(this char ch)
+        {
+            if (!Char.IsDigit(ch))
+            {
+                return true;
+            }
+
+            return false;
+        }
+    }
+
+    
 
  
 
