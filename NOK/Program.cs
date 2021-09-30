@@ -25,7 +25,7 @@ namespace NOK
             var gcd = GetGCD(a, b);
             var lcm = a * b / (ulong)gcd;
 
-            Console.WriteLine($"\n NOK = {lcm}");
+            Console.WriteLine(lcm);
 
             Console.ReadKey();
         }
