@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
@@ -21,10 +22,16 @@ namespace NOK
 
             string str = Console.ReadLine();
             var div = str.FirstOrDefault(char.IsLetter);
-
-
-
-            //int[] intMatch = str.Where(Char.IsDigit).Select(x => int.Parse(x.ToString())).ToArray();
+            var divs = new char[1];
+            divs[0] = div;
+            var strList = str.Split(divs);
+            
+            
+            //var strList = str.Substring()
+                
+                
+                
+                //int[] intMatch = str.Where(Char.IsDigit).Select(x => int.Parse(x.ToString())).ToArray();
             //var a = intMatch[0];
             //var b = intMatch[1];
 
