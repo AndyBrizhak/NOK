@@ -28,27 +28,23 @@ namespace NOK
             int n;
             ulong l;
             bool resParsToInt = int.TryParse(strList[0], out n);
+            
             bool resParseToUlong = ulong.TryParse(strList[1], out l);
-            
 
+            ulong a = (ulong)n;
+            ulong b = l;
             
-            
+            var gcd = GetGCD(a, b);
+            var lcm = a*b/(ulong) gcd;
 
-            //var gcd = GetGCD(a, b);
-            //var lcm = a * b / gcd;
-
-            //Console.WriteLine($"\nНОД равен {gcd}\nНОК равен {lcm}");
-            Console.WriteLine($"\n div  {div}");
+            Console.WriteLine($"\n NOK = {lcm}");
+            //Console.WriteLine($"\n div  {div}");
             
             Console.ReadKey();
         }
 
-        
-        
-        
-        
-
-        private static long GetGCD(long a, long b)
+       
+        private static ulong GetGCD(ulong a, ulong b)
         {
             if (a == 0)
             {
