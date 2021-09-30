@@ -13,37 +13,34 @@ namespace NOK
             var divs = new char[1];
             divs[0] = div;
             var strList = str.Split(divs, 2);
-            int n;
+            ulong n;
             ulong l;
-            bool resParsToInt = int.TryParse(strList[0], out n);
+            bool resParsToInt = ulong.TryParse(strList[0], out n);
 
             bool resParseToUlong = ulong.TryParse(strList[1], out l);
-
-            ulong a = (ulong)n;
-            ulong b = l;
-
-            var gcd = GetGCD(a, b);
-            var lcm = a * b / (ulong)gcd;
+      
+            var gcd = GetGCD(n, l);
+            var lcm = n * l /gcd;
 
             Console.WriteLine(lcm);
 
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
 
-        private static ulong GetGCD(ulong a, ulong b)
+        private static ulong GetGCD(ulong n, ulong l)
         {
-            if (a == 0)
+            if (n == 0)
             {
-                return b;
+                return l;
             }
 
-            if (b == 0)
+            if (l == 0)
             {
-                return a;
+                return n;
             }
 
-            return a > b ? GetGCD(a % b, b) : GetGCD(a, b % a);
+            return n > l ? GetGCD(n % l, l) : GetGCD(n, l % n);
         }
 
 
